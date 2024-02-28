@@ -33,13 +33,13 @@ export class Server {
         this.app.use(this.routes);
 
         //* SPA
-        this.app.get('*', (req, res) => {
-            const indexPath = path.join(
-                __dirname + `../../../${this.publicPath}/index.html`
-            );
-            res.sendFile(indexPath);
-            return;
-        });
+        // this.app.get('*', (req, res) => {
+        //     const indexPath = path.join(
+        //         __dirname + `../../../${this.publicPath}/index.html`
+        //     );
+        //     res.sendFile(indexPath);
+        //     return;
+        // });
 
         this.app.listen(this.port, () => {
             console.log(`Server running on port: ${this.port}`);
